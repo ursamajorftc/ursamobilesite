@@ -63,7 +63,6 @@
     background-color: #cc5200;
 }
 
-/* Mobile-Friendly Changes */
 @media (max-width: 768px) {
     #stem h2 {
         font-size: 2em;
