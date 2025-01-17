@@ -1,0 +1,173 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* Ensure header is always at the top */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #ff6600;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle .bar {
+    background-color: #FFD700;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+#menu-list {
+    display: flex;
+    list-style: none;
+}
+
+#menu-list li {
+    margin-left: 30px;
+}
+
+#menu-list li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+/* Achievements Section */
+.achievements {
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #FFD700;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievement h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.achievement p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #f5f5f5;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    header ul.active {
+        display: flex;
+    }
+}
