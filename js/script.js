@@ -18,3 +18,9 @@ document.getElementById('mobile-menu').addEventListener('click', function () {
       const menu = document.querySelector('header ul');
       menu.classList.toggle('active');
   });
+  $('#imageModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var imageSrc = button.data('image');
+    var modalImage = $('#modalImage');
+    modalImage.attr('src', imageSrc);
+});
